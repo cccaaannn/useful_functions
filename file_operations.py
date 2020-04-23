@@ -54,3 +54,24 @@ def __read_cfg_file(cfg_path="options.cfg"):
     except:
         return 0
 
+
+def __separate_path_name_ext(full_file_path):
+    import os
+    file_path, file_name = os.path.split(full_file_path)
+    file_name, file_extension = os.path.splitext(file_name)
+    return file_path, file_name, file_extension
+
+
+def __exclude_list_from_list(items, exclude_list):
+    for exclude in exclude_list:
+        if exclude in items: 
+            items.remove(exclude)
+    return items
+
+def __exclude_list_from_list2(items, exclude_list):
+    items = list(filter(lambda x: x not in exclude_list, items))
+    return items
+
+
+
+
