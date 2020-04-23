@@ -15,7 +15,7 @@ def __write_to_file(to_write, file_name, write_mode="w"):
     except (OSError, IOError) as e:
         print(e)
 
-def __create_unique_path(file_path, before_number="(", after_number=")"):
+def __create_unique_file_name(file_path, before_number="(", after_number=")"):
     import os
     temp_file_path = file_path
     file_name_counter = 1
