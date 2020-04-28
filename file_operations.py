@@ -36,6 +36,7 @@ def __create_unique_file_name(file_path, before_number="(", after_number=")"):
 
 def __copy_all_files_from_dir(src, dest):
     import os
+    import shutil
     src_files = os.listdir(src)
     for file_name in src_files:
         full_file_name = os.path.join(src, file_name)
@@ -46,15 +47,6 @@ def __create_dir_if_not_exists(path):
     if(not os.path.exists(path)):
         os.makedirs(path)
 
-def __read_cfg_file(cfg_path="options.cfg"):
-    try:
-        with open(cfg_path,"r") as file:
-            dict = json.load(file)
-        return dict
-    except:
-        return 0
-
-
 def __separate_path_name_ext(full_file_path):
     import os
     file_path, file_name = os.path.split(full_file_path)
@@ -62,15 +54,6 @@ def __separate_path_name_ext(full_file_path):
     return file_path, file_name, file_extension
 
 
-def __exclude_list_from_list(items, exclude_list):
-    for exclude in exclude_list:
-        if exclude in items: 
-            items.remove(exclude)
-    return items
-
-def __exclude_list_from_list2(items, exclude_list):
-    items = list(filter(lambda x: x not in exclude_list, items))
-    return items
 
 
 
