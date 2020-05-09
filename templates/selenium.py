@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options 
 
 
-class requests_selenium():
+class selenium_template():
     def __init__(self, driver_path, options = ["--headless","--no-sandbox","--disable-dev-shm-usage"]):
         self.base_url = ""
         self.driver_path = driver_path
