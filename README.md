@@ -1,1 +1,1 @@
-## useful functions
+## useful functions for ctrl-c
