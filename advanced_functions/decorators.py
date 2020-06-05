@@ -31,10 +31,10 @@ decorated = decorator_funcion(hello)
 
 # 2
 @decorator_funcion
-def hello():
+def hello2():
     print("hello")
 
-# hello()
+# hello2()
 
 
 # class decorator
@@ -43,7 +43,7 @@ class decorator_class(object):
         self.func = func
     def __call__(self, *args, **kwargs):
         print("add functionality here")
-        return func(*args, **kwargs)
+        return self.func(*args, **kwargs)
         
 
 
