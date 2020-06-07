@@ -70,9 +70,6 @@ def calc_exec_time(func):
 
     return wrapper
 
-import time
-
-
 
 # use decorators for logging
 def __set_logger(logger_name):
@@ -100,7 +97,7 @@ def log_func(logger):
     return decorator
 
 
-
+import time
 logger = __set_logger("my_logger")
 
 @log_func(logger)
