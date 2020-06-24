@@ -1,5 +1,18 @@
-def __set_logger(logger_name, log_file, verbose):
-    import logging
+import logging
+
+
+logging.basicConfig(level=logging.DEBUG,
+                    format="[%(levelname)s] %(asctime)s %(message)s",
+                    handlers=[logging.FileHandler("example.log"), logging.StreamHandler()])
+
+
+logging.debug('This message should go to the log file and to the console')
+logging.info('So should this')
+logging.warning('And this, too')
+
+
+
+def __set_logger(logger_name, log_file=None, log_level=20):
 
     logger = logging.getLogger(logger_name)  
 
@@ -8,14 +21,15 @@ def __set_logger(logger_name, log_file, verbose):
     # print(logger.hasHandlers())
     # if logger exists don't add new handlers
     if(not logger.handlers):
-        verbosity = {0:50,1:40,2:30,3:20}
-        if(verbosity.get(verbose)):
-            logger.setLevel(verbosity.get(verbose))
-        else:
-            logger.setLevel(20)
+        logger.setLevel(log_level)
         
         # log formatter
         formatter = logging.Formatter("[%(levelname)s] %(asctime)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+
+        # stream handler
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(formatter)
+        logger.addHandler(stream_handler)
 
         # file handler
         if(log_file):
@@ -23,11 +37,7 @@ def __set_logger(logger_name, log_file, verbose):
             file_handler.setFormatter(formatter)
             logger.addHandler(file_handler)
 
-        # stream handler
-        stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(formatter)
-        logger.addHandler(stream_handler)
-
+       
     return logger
 
 
