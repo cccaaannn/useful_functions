@@ -10,5 +10,9 @@ sys.stderr.flush()
 # get programs parameters
 sys.argv
 
+# siz of an object
+sys.getsizeof(range(0, 10000))
+
+
 # exit program
 sys.exit()
