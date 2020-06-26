@@ -25,6 +25,7 @@ os.stat("test.txt")
 
 # Access home directory
 os.environ.get("HOME")
+os.getenv("HOME")
 
 # os.walk is a generator that yields a tuple of 3 values as it walks the directory tree
 for dirpath, dirnames, filenames in os.walk("routepath"): 

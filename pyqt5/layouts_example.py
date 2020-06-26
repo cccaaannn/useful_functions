@@ -33,7 +33,7 @@ class App(QWidget):
 
     def init_variables(self):
         """inits class variables"""
-        self.button_counter = 0
+        pass
 
 
     def ui(self):
