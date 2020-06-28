@@ -1,0 +1,1 @@
+print("pass") if sum([(int(input("grade: "))* int(input("percent: ")))/100 for i in range(3)]) > int(input("treshold: ")) else print("fail")
