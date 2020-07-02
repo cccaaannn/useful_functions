@@ -9,7 +9,7 @@ def do_something(seconds):
 
 # run processes with process pool
 def main():
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=2) as executor:
         result1 = executor.submit(do_something, 2)
         result2 = executor.submit(do_something, 3)
         

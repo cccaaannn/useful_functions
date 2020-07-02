@@ -37,7 +37,7 @@ class app(QMainWindow):
     def init_variables(self):
         """inits class variables"""
         self.button_counter = 0
-        self.img1_path = "pyqt5/images/img.png"
+        self.img1_path = "07-pyqt5/images/img.png"
         self.file_dialog_path = ""
 
  

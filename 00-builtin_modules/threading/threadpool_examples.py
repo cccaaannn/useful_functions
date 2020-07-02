@@ -8,7 +8,7 @@ def do_something(seconds):
     return seconds
 
 # run threads with thread pool
-with concurrent.futures.ThreadPoolExecutor() as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
     result1 = executor.submit(do_something, 2)
     result2 = executor.submit(do_something, 3)
 
