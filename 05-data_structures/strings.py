@@ -10,3 +10,15 @@ my_str.split(" ")
 # strip strips \n
 my_str2.strip()
 
+
+# left aligned
+s = "{:<30}".format('left aligned')
+
+# right aligned
+s = "{:>30}".format('right aligned')
+
+# centered
+s = "{:^30}".format('centered')
+
+# centered and padded with *
+s = "{:*^30}".format('centered')
