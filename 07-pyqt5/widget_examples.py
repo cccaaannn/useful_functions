@@ -1,8 +1,8 @@
 # pip install pyqt5
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, qApp
-from PyQt5.QtWidgets import QCheckBox, QLabel, QLineEdit, QPushButton, QRadioButton, QButtonGroup, QTextEdit, QFileDialog, QAction
-from PyQt5 import QtGui
+from PyQt5.QtWidgets import QCheckBox, QLabel, QLineEdit, QPushButton, QRadioButton, QButtonGroup, QTextEdit, QFileDialog, QAction, QDesktopWidget
+from PyQt5 import QtGui, QtCore, QtWidgets
 import sys
 import os
 
@@ -14,13 +14,15 @@ class app(QMainWindow):
 
         self.init_variables()
         self.init_ui()
-
+     
 
     def init_ui(self):
         """inits ui"""
         self.setWindowTitle("example window")
         # self.setGeometry(100,100,700,700)
-        self.move(100, 100)
+        # self.move(100, 100)
+        self.center()
+
         self.setFixedSize(700,700)
 
         self.labels()
@@ -40,7 +42,13 @@ class app(QMainWindow):
         self.img1_path = "07-pyqt5/images/img.png"
         self.file_dialog_path = ""
 
- 
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+    
+
     def labels(self):
         """adds labels"""
         self.l1 = QLabel(self)
