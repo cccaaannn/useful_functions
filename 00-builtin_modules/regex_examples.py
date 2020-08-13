@@ -105,6 +105,17 @@ text_to_search = "hi_hello@gmail.edu hello123@somemail.com.tr"
 pattern = r"[A-Za-z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
 
 
+# match ip
+text_to_search = "192.186.1.1"
+pattern = r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+
+
+# match date
+text_to_search = "8/12/2020"
+pattern = r"\d{1,2}/\d{1,2}/\d{4}"
+
+
+
 # match urls
 text_to_search = """
 https://www.google.com
