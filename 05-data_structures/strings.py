@@ -11,14 +11,31 @@ my_str.split(" ")
 my_str2.strip()
 
 
-# left aligned
-s = "{:<30}".format('left aligned')
+# string alignment
 
-# right aligned
-s = "{:>30}".format('right aligned')
+print("{:<30}".format('left aligned'))
+print("{:>30}".format('right aligned'))
+print("{:^30}".format('centered'))
+print("{:*^30}".format('centered'))
 
-# centered
-s = "{:^30}".format('centered')
 
-# centered and padded with *
-s = "{:*^30}".format('centered')
+# string formatting
+
+name = "can"
+value = 2
+
+# old way
+print("name is %s value is %s" % (name, value))
+print("name is %(n)s value is %(v)s" % {'n': name, 'v': value})
+
+# format string
+print("name is {} value is {}".format(name, value))
+print("name is {0} value is {1}".format(name, value))
+print("name is {n} value is {v}".format(n=name, v=value))
+
+# f-string formatting in Python 3.6
+print(f'name is {name} value is {value}')
+
+
+inner = f"fsting {value}"
+print(f'you can use {f"nested {inner}"}')
