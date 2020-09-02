@@ -1,0 +1,20 @@
+pip install twine
+
+python setup.py sdist
+twine upload dist/*
+
+
+
+sdist bdist explanation
+
+https://stackoverflow.com/questions/6292652/what-is-the-difference-between-an-sdist-tar-gz-distribution-and-an-python-egg#:~:text=sdist%20is%20a%20%22source%20distribution,sdist%20will%20require%20a%20compiler.
+setup.py sdist creates a source distribution: it contains setup.py, the source files of your module/script 
+(.py files or .c/.cpp for binary modules), your data files, etc. 
+The result is an archive that can then be used to recompile everything on any platform.
+
+setup.py bdist (and bdist_*) creates a built distribution: it includes .pyc files, .so/.dll/.dylib for binary modules, 
+.exe if using py2exe on Windows, your data files... but no setup.py. The result is an archive that is specific to a platform 
+(for example linux-x86_64) and to a version of Python, 
+and that can be installed simply by extracting it into the root of your filesystem (executables are in /usr/bin (or equivalent), 
+data files in /usr/share, modules in /usr/lib/pythonX.X/site-packages/...). 
+You can even build rpm archives that can be directly installed using your package manager.
