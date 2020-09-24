@@ -1,9 +1,19 @@
-## useful functions
-There are things that I use once in a while and I'm tired of searching for that one good example to use for the stuff that I forget, or too lazy to write again.
+## **useful functions**
+Example usages for many things.
 
-- Useful functions for ctrl-c.
-- Builtin module functions and usages.
-- Advanced function examples.
-- Advanced class abilities.
-- Templates for bots, web scraping, user interfaces.
-- Some usage tricks.
+---
+Structure
+- Module examples
+    - Builtin modules
+    - Some external modules
+    - Data science modules
+- Advanced
+    - Data structures
+    - Advanced class usages
+    - More
+- ui examples
+    - pyqt5
+- Templates
+    - Bot templates
+    - Web scraping templates
+- Other examples
