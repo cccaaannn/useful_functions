@@ -34,6 +34,24 @@ image.convert(mode="L")
 # blur 
 image.filter(ImageFilter.GaussianBlur(radius=2))
 
+# convert to jpg
+def convert_to_jpg(image_path):
+    """tries to convert the image to jpg with pillow"""
+    try:
+        # create new path name
+        file_name, _ = os.path.splitext(image_path)
+        new_path = file_name + ".jpg"
+        
+        # convert image
+        image = Image.open(image_path).convert('RGB')
+        image.save(new_path)
+
+        # remove old extension image
+        os.remove(image_path)
+        return 1, new_path
+    except Exception as e:
+        print(e)
+        return 0, image_path
 
 
 # convert all images to thumbnail
