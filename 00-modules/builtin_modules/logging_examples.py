@@ -11,6 +11,11 @@ logging.info('So should this')
 logging.warning('And this, too')
 
 
+# custom log level
+logging.addLevelName(25, "Result")
+logging.log(25, "asd")
+
+
 
 def __set_logger(logger_name, log_file=None, log_level=20):
 
