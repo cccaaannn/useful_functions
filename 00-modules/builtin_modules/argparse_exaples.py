@@ -19,6 +19,54 @@ def main():
 
 
 
+# not small example
+def main2():
+    def directory(p):
+        if(os.path.isdir(p)):
+            return p
+        else:
+            raise argparse.ArgumentTypeError("directory does not exists")
+
+    def path(p):
+        if(os.path.isfile(p)):
+            return p
+        else:
+            raise argparse.ArgumentTypeError("file does not exists")
+
+    def dim(d):
+        try:
+            d = int(d)
+            if(d > 0):
+                return d
+            else:
+                raise argparse.ArgumentTypeError()
+        except:
+            raise argparse.ArgumentTypeError("invalid image dim, Ex: 1280 720")
+
+    parser = argparse.ArgumentParser()
+
+    # group1
+    group1 = parser.add_argument_group("group1")
+    group1.add_argument("-m", '--path1', dest="path1", metavar="<path>", type=directory, required=True, help='aaa')
+    group1.add_argument("-n", '--path2', dest="path2", metavar="<path>", type=path, required=True, help='aaa')
+
+    # group2
+    group2 = parser.add_argument_group("group2")
+    mutually_exclusive_group = group2.add_mutually_exclusive_group(required=True)
+    mutually_exclusive_group.add_argument("-d", dest="path3", metavar="<path>", type=directory, help='aaa')
+    mutually_exclusive_group.add_argument("-i", dest="path4", metavar="<path>", type=path, help='aaa')
+    
+
+    parser.add_argument('--resize', dest="resize", metavar="<dim>", type=dim, default=False, required=False, nargs=2, help='Resize')
+
+    args = parser.parse_args()
+
+
+
+
+
+
+
 
 # prog: program name
 # usage: usage 
