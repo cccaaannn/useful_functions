@@ -35,6 +35,29 @@ l = [item for item in items2 if isinstance(item, int)]
 l = [items2[index] for index, mapped_item in enumerate(list(map(lambda element: True if isinstance(element, int) else False, items2))) if mapped_item]
 
 
+class job:
+    def __init__(self, isActive):
+        self.isActive = isActive
+
+    def __repr__(self):
+        return "job: {}".format(self.isActive)
+
+
+jobs = [job(1), job(1), job(1), job(0), job(0)]
+
+temp = []
+for job in jobs:
+    if(job.isActive):
+        temp.append(job)
+print(temp)
+
+filtered = list(filter(lambda job : job.isActive, jobs))
+
+print(filtered)
+
+
+
+
 
 # --------------------reduce--------------------
 from functools import reduce

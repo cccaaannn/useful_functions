@@ -4,7 +4,7 @@ import uuid
 uuid.uuid1()
 # UUID('a8098c1a-f86e-11da-bd1a-00112444be1e')
 
->>> # make a UUID using an MD5 hash of a namespace UUID and a name
+# make a UUID using an MD5 hash of a namespace UUID and a name
 uuid.uuid3(uuid.NAMESPACE_DNS, 'python.org')
 # UUID('6fa459ea-ee8a-3ca4-894e-db77e160355e')
 
