@@ -1,3 +1,7 @@
+# pip install pywin32
+
+
+
 import win32clipboard
 from io import BytesIO
 from PIL import Image
