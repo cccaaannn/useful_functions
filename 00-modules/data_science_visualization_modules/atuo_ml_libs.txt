@@ -1,0 +1,37 @@
+# lazypredict
+# https://github.com/shankarpandala/lazypredict
+
+
+# Auto-Sklearn
+# https://github.com/automl/auto-sklearn?spm=a2c65.11461447.0.0.68b37903mDUGY6
+
+
+# TPOT
+# https://github.com/EpistasisLab/tpot
+
+
+# Auto-ViML
+# https://github.com/AutoViML/Auto_ViML
+
+
+# H2O AutoML
+# java
+# apt-get install default-jre
+# pip install h2o
+
+
+# Auto-Keras
+# https://github.com/keras-team/autokeras?spm=a2c65.11461447.0.0.68b37903FriPcD
+
+
+# MLBox
+# https://github.com/sergeiissaev/youtube/blob/master/mlbox.ipynb
+
+
+# Hyperopt Sklearn
+# https://github.com/hyperopt/hyperopt-sklearn
+
+
+# AutoGluon
+# https://github.com/awslabs/autogluon
+# https://colab.research.google.com/github/srivatsan88/YouTubeLI/blob/master/Demo_of_AutoGluon.ipynb
