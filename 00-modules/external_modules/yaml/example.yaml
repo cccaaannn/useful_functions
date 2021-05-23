@@ -1,0 +1,18 @@
+another dict:
+  foo: bar
+  key: value
+  the answer: 42
+code: 'import os
+
+  print(os.listdir())'
+hello: bla
+hi:
+- 1
+- 2
+- 3.141
+- '1337'
+- help
+- €
+unsecure_code: 'import os
+
+  exec(print(os.listdir()))'
