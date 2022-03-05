@@ -1,0 +1,33 @@
+proxy_options:
+    proxy_URLs:
+    # -  "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all&simplified=true"
+    # -  "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt"
+    # -  "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt"
+    # -  "https://www.proxy-list.download/api/v1/get?type=socks5"
+    -  "https://www.proxyscan.io/download?type=socks5"
+
+    proxy_schemas: 
+        http: socks5h://{}
+        https: socks5h://{}
+
+    proxy_testing_ip: "http://httpbin.org/ip"
+    proxy_filter_pattern: '[0-9]+(?:\.[0-9]+){3}:[0-9]+'
+    proxy_save_file: "proxies/proxies.txt"
+    proxy_testing_threads: 50
+    proxy_testing_timeout: 5
+    verbose: False
+
+
+user_agents:
+-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+-  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+-  "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+-  "Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36"
+
+default_user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+
+
+
+
