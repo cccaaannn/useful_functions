@@ -5,6 +5,9 @@ logging.basicConfig(level=logging.DEBUG,
                     format="[%(levelname)s] %(asctime)s %(message)s",
                     handlers=[logging.FileHandler("example.log"), logging.StreamHandler()])
 
+# Log with color
+logging.basicConfig(level=logging.INFO, format="\33[32m%(asctime)s\x1b[0m \33[34m[%(levelname)s]\x1b[0m \x1b[31;1m%(thread)d\x1b[0m --- %(message)s", handlers=[logging.StreamHandler()])
+
 
 logging.debug('This message should go to the log file and to the console')
 logging.info('So should this')
